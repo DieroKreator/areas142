@@ -2,6 +2,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvFileSource;
 import org.junit.jupiter.params.provider.CsvSource;
 
 import com.qtechwired.Main;
@@ -60,6 +61,15 @@ public class testeAreas {
     public void testeCalcularAreaRetanguloTDD(int num1, int num2, int resultadoEsperado){
 
         int resulatadoAtual = Main.calcularAreaRetangulo(num1, num2);
+
+        assertEquals(resultadoEsperado, resulatadoAtual);
+    }
+
+    @ParameterizedTest
+    @CsvFileSource(resources = "csv/somar.csv", numLinesToSkip = 1, delimiter = ',')
+    public void testeCalcularAreaTriangulo(){
+
+        int resulatadoAtual = Main.calcularAreaTriangulo(b, h);
 
         assertEquals(resultadoEsperado, resulatadoAtual);
     }
