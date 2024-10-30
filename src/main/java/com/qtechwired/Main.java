@@ -28,8 +28,8 @@ public class Main {
         return resultado;
     }
 
-    public static int calcularAreaTriangulo(int base, int height) {
-        int resultado = (base * height) / 2;
+    public static float calcularAreaTriangulo(float base, float height) {
+        float resultado = (base * height) / 2;
         System.out.println("Area do triangulo: " + resultado);  
         return resultado;
     }

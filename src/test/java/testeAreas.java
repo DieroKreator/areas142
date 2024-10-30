@@ -46,7 +46,7 @@ public class testeAreas {
         int b = 2;
         int h = 7;
         int resultadoEsperado = 7;
-        int resulatadoAtual = Main.calcularAreaTriangulo(b, h);
+        float resulatadoAtual = Main.calcularAreaTriangulo(b, h);
 
         assertEquals(resultadoEsperado, resulatadoAtual);
     }
@@ -66,10 +66,10 @@ public class testeAreas {
     }
 
     @ParameterizedTest
-    @CsvFileSource(resources = "csv/somar.csv", numLinesToSkip = 1, delimiter = ',')
-    public void testeCalcularAreaTriangulo(){
+    @CsvFileSource(resources = "csv/calcularAreaTriangulo.csv", numLinesToSkip = 1, delimiter = ',')
+    public void testeCalcularAreaTrianguloCSV(float b, float h, float resultadoEsperado){
 
-        int resulatadoAtual = Main.calcularAreaTriangulo(b, h);
+        float resulatadoAtual = Main.calcularAreaTriangulo(b, h);
 
         assertEquals(resultadoEsperado, resulatadoAtual);
     }
